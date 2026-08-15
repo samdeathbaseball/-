@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="청라삼데스 학생야구단 공식 홈페이지" />
+  <title>청라삼데스 학생야구단</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">
+        청라삼데스 <span>학생야구단</span>
+      </a>
+
+      <nav>
+        <a href="#intro">구단소개</a>
+        <a href="#wiki">위키</a>
+        <a href="#apply">입단지원</a>
+        <a href="./admin.html" class="nav-admin">관리자</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div>
+          <span class="eyebrow">
+            CHEONGNA SAMDES STUDENT BASEBALL CLUB
+          </span>
+
+          <h1>
+            야구를 좋아하는 학생들이<br />
+            <strong>함께 성장하는 팀</strong>
+          </h1>
+
+          <p id="hero-description">
+            청라삼데스 학생야구단 공식 홈페이지입니다.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#apply">
+              입단 지원하기
+            </a>
+
+            <a class="btn btn-ghost" href="#wiki">
+              팀 위키 보기
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-label">
+            TEAM STATUS
+          </div>
+
+          <div id="hero-status" class="hero-card-title">
+            함께 뛰는 학생야구
+          </div>
+
+          <div class="hero-card-sub">
+            훈련 · 경기 · 팀 문화 · 공지
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="intro" class="section">
+      <div class="container">
+
+        <div class="section-head">
+          <span>01</span>
+          <h2>청라삼데스 소개</h2>
+        </div>
+
+        <div class="intro-grid">
+
+          <article class="panel">
+            <h3>우리 팀</h3>
+            <p id="intro-team">
+              학생들이 함께 야구를 즐기고 실력을 쌓는 팀입니다.
+            </p>
+          </article>
+
+          <article class="panel">
+            <h3>활동 방향</h3>
+            <p id="intro-direction">
+              기초 훈련부터 실제 경기까지,
+              팀워크와 기본기를 중심으로 운영합니다.
+            </p>
+          </article>
+
+          <article class="panel">
+            <h3>공지</h3>
+            <p id="intro-notice">
+              관리자 페이지에서 언제든 내용을 수정할 수 있습니다.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="wiki" class="section section-dark">
+      <div class="container">
+
+        <div class="section-head light">
+          <span>02</span>
+          <h2>팀 위키</h2>
+        </div>
+
+        <div id="wiki-list" class="wiki-grid">
+          <div class="loading">
+            위키를 불러오는 중...
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="apply" class="section">
+      <div class="container form-wrap">
+
+        <div>
+          <div class="section-head">
+            <span>03</span>
+            <h2>입단 지원</h2>
+          </div>
+
+          <p class="muted">
+            지원서를 작성하면 운영진이 관리자 페이지에서
+            확인할 수 있습니다.
+          </p>
+        </div>
+
+
+        <form id="apply-form" class="apply-form">
+
+          <div class="form-row">
+
+            <label>
+              이름
+              <input
+                required
+                name="name"
+                maxlength="50"
+                placeholder="홍길동"
+              />
+            </label>
+
+            <label>
+              학년
+              <input
+                required
+                name="grade"
+                maxlength="30"
+                placeholder="중2 / 고1 등"
+              />
+            </label>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <label>
+              연락처
+              <input
+                required
+                name="phone"
+                maxlength="30"
+                placeholder="010-0000-0000"
+              />
+            </label>
+
+            <label>
+              포지션
+              <input
+                name="position"
+                maxlength="30"
+                placeholder="투수 / 내야 / 외야 / 미정"
+              />
+            </label>
+
+          </div>
+
+
+          <label>
+            야구 경험
+            <input
+              name="experience"
+              maxlength="150"
+              placeholder="기간, 포지션, 소속 등"
+            />
+          </label>
+
+
+          <label>
+            지원 동기
+            <textarea
+              required
+              name="motivation"
+              maxlength="1000"
+              rows="5"
+              placeholder="팀에 지원한 이유를 적어주세요."
+            ></textarea>
+          </label>
+
+
+          <label class="check">
+            <input
+              required
+              type="checkbox"
+              name="consent"
+            />
+            개인정보 수집 및 지원서 접수에 동의합니다.
+          </label>
+
+
+          <button
+            class="btn btn-primary wide"
+            type="submit"
+          >
+            지원서 제출
+          </button>
+
+
+          <div
+            id="apply-result"
+            class="form-result"
+          ></div>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      © 청라삼데스 학생야구단 · Official Website
+    </div>
+  </footer>
+
+
+  <script type="module" src="./src/main.js"></script>
+
+</body>
+</html>
